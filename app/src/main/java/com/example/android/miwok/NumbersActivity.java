@@ -17,6 +17,8 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -39,5 +41,13 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("Eight");
         words.add("Nine");
         words.add("Ten");
+
+        //code to display to screen
+        LinearLayout rootView = (LinearLayout)findViewById(R.id.rootView);
+        TextView wordView = new TextView(this);
+        //child view
+        wordView.setText(words.get(0));
+        //parent view
+        rootView.addView(wordView);
     }
 }
