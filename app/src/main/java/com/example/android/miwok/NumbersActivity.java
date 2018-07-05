@@ -15,9 +15,12 @@
  */
 package com.example.android.miwok;
 
+import android.provider.UserDictionary;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -30,25 +33,23 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         //this is a constructor
-        ArrayList<String> words = new ArrayList<String>();
-        words.add("One");
-        words.add("Two");
-        words.add("Three");
-        words.add("Four");
-        words.add("Five");
-        words.add("Six");
-        words.add("Seven");
-        words.add("Eight");
-        words.add("Nine");
-        words.add("Ten");
+        //ArrayList is a generic class
+        ArrayList<Word> words = new ArrayList<Word>();
 
+        words.add(new Word("One", "jun"));
+        words.add(new Word("Two", "kieb"));
+        words.add(new Word("Three", "oxib"));
+        words.add(new Word("Four", "kajib"));
+        words.add(new Word("Five", "job"));
+        words.add(new Word("Six", "waqib"));
+        words.add(new Word("Seven", "wuqub"));
+        words.add(new Word("Eight", "wajxaqib"));
+        words.add(new Word("Nine", "belejeb"));
+        words.add(new Word("Ten", "lajuj"));
 
-        LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
+        WordAdapter adapter = new WordAdapter(this, words);
+        ListView listView = (ListView) findViewById(R.id.list);
+        listView.setAdapter(adapter);
 
-        for (int index = 0; index < 10; index++) {
-            TextView wordView = new TextView(this);
-            wordView.setText(words.get(index));
-            rootView.addView(wordView);
-        }
     }
 }
