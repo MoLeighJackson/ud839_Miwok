@@ -18,6 +18,8 @@ package com.example.android.miwok;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import java.util.ArrayList;
+
 public class NumbersActivity extends AppCompatActivity {
 
     @Override
@@ -25,17 +27,17 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
 
-        //create a string array of english words
-        String[] words = new String[10];
-        words[0] = "One";
-        words[1] = "Two";
-        words[2] = "Three";
-        words[3] = "Four";
-        words[4] = "Five";
-        words[5] = "Six";
-        words[6] = "Seven";
-        words[7] = "Eight";
-        words[8] = "Nine";
-        words[9] = "Ten";
+        //this is a constructor
+        ArrayList<String> words = new ArrayList<String>();
+        words.add("One");
+        words.add("Two");
+        words.add("Three");
+        words.add("Four");
+        words.add("Five");
+        words.add("Six");
+        words.add("Seven");
+        words.add("Eight");
+        words.add("Nine");
+        words.add("Ten");
     }
 }
