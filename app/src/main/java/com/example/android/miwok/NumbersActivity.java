@@ -42,16 +42,13 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("Nine");
         words.add("Ten");
 
-        //Create a new TextView, set TextView to a single word in the list, add the TextView to the rootView
+
         LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
-        //set up counter variable to keep track of index position for words
-        int index = 0;
-        while(index<words.size()){
+
+        for (int index = 0; index < 10; index++) {
             TextView wordView = new TextView(this);
             wordView.setText(words.get(index));
             rootView.addView(wordView);
-            //update counter variable
-            index++;
         }
     }
 }
