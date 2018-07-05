@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
 
                 // Start the new activity
-                startActivity(colorsIntent);
+              startActivity(colorsIntent);
             }
         });
 
